@@ -30,6 +30,8 @@ yarn-debug.log*
 .yarn-integrity
 
 .env
+.env.*
+!.env.example
 .DS_Store
 
 /coverage
@@ -38,3 +40,16 @@ yarn-debug.log*
 /ee
 dump.rdb
 *.onnx
+
+# Docker Compose local volumes (do not commit)
+/pg_data/
+/caddy/
+
+# Sandbox deploy local state (passwords, generated task JSON)
+infra/sandbox/.deploy-state/
+infra/sandbox/.docuseal-db-password
+infra/sandbox/docuseal-init.sql
+infra/sandbox/terraform/.terraform/
+infra/sandbox/terraform/*.tfstate
+infra/sandbox/terraform/*.tfstate.*
+infra/sandbox/terraform/*.tfvars

@@ -1,0 +1,6 @@
+.docuseal-db-password
+docuseal-init.sql
+.deploy-state/
+terraform.tfstate*
+.terraform/
+*.tfvars
